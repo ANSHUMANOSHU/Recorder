@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:onClick="startStopRecording"
+        android:background="@drawable/background_green"
+        android:id="@+id/recorderlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <Chronometer
+            android:layout_centerVertical="true"
+            android:id="@+id/meter"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/recordbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format="%s"
+            android:textColor="#fff"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/mic"
+            android:id="@+id/recordbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@drawable/btn_back"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingVertical="1dp"
+        android:background="@drawable/appicon"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recordingsRecyclerView"/>
+
+</LinearLayout>
